@@ -38,7 +38,7 @@ implementing MVVM Model and using a lot of Great Libraries
 # User Documentation :
 ##1. **Splash Screen :**
 
-![alt tag](https://app.box.com/s/m1lkapwakbhly6tomhzsqo6q9zpkpukb)
+![alt tag](https://app.box.com/representation/file_version_75603562317/image_2048/1.png)
 
 This screen contains Image View and Text View with Fade in Animation. After finishing animation, the user either logged in to Followers Screen or Login Screen.
 
