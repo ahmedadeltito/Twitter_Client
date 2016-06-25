@@ -176,13 +176,13 @@ Data model containing business and validation logic, it's a POJO "JavaBean class
 
 # Localization and Native RTL support
 
-##** Localization from Arabic to English and vice verse:**
+##**Localization from Arabic to English and vice verse:**
 While developing your awesome application, sometimes you are required to add a feature to change the language of your app on the fly. However, Android OS does not directly support this behaviour. And therefore, you need to solve this situation in some other ways. “LocaleHelper” is the solution all you need. You just have to initialize locale on your application’s main class. After that all your language changes will persist.
 if you call ```java onCreate(Context context)``` constructor it will just set default locale of your device as the default locale of your application.
 
 if you call ```java onCreate(Context context, String defaultLanguage)``` constructor it will set the given language as the default language of your application for the first time that your application opens. After that you can change your locale by using the buttons or any other method that you provide to your users through your layout.
 
-##** Native RTL support:**
+##**Native RTL support:**
 Android 4.1 (Jelly Bean) introduced limited support for bidirectional text in TextView and EditText elements, allowing apps to display and edit text in both left-to-right (LTR) and right-to-left (RTL) scripts. Android 4.2 added full native support for RTL layouts, including layout mirroring, allowing you to deliver the same great app experience to all of your users, whether their language uses a script that reads right-to-left or one that reads left-to-right.
 
 To take advantage of RTL layout mirroring, simply make the following changes to your app:
@@ -195,4 +195,4 @@ If you want your app to work with versions earlier than Android 4.2 (the app's t
 
 -----------------------------------------------------------------------------------------------------
 
-###** If you want to know more details about this project, please take a look on [Project Documentation](https://github.com/ahmed-adel-said/Twitter_Client/tree/master/documentation), since it is a HTML generated documentation with great user interface and contains the needed UML diagrams that you need to get the full image**
+###**If you want to know more details about this project, please take a look on [Project Documentation](https://github.com/ahmed-adel-said/Twitter_Client/tree/master/documentation), since it is a HTML generated documentation with great user interface and contains the needed UML diagrams that you need to get the full image**
