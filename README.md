@@ -27,7 +27,7 @@ implementing MVVM Model and using a lot of Great Libraries
 
 6. [Parceler](https://github.com/johncarl81/parceler)
 
-7. [Realm ORM Database](https://realm.io)
+7. [Realm Database](https://realm.io)
 
 # Plugins that are used
 1. [Android Drawable Importar](http://androidgifts.com/material-design-icons-android-studio-drawable-importer/)
@@ -52,7 +52,7 @@ Button above is nothing but a logout button that will appear a popup confirmatio
 6. **Change Langauge:**
 Application supports Arabic and English Language with Right-To-Left and Left-To-Right Layout Direction Methodology.
 7. **Caching :**
-Local Database is applied in these two screen Followers and Follower Detail Screens by using Realm ORM Database Library
+Local Database is applied in these two screen Followers and Follower Detail Screens by using Realm Database Library
 
 -----------------------------------------------------------------------------------------------------
 
@@ -104,6 +104,38 @@ All you want to know about Data Binding and its Official Talk that is done by Yi
 
 6.**Parceler :**
 
-In Android, Parcelables are a great way to serialize Java Objects between Contexts. Compared with traditional Serialization, Parcelables take on the order of 10x less time to both serialize and deserialize. There is a major flaw with Parcelables, however. Parcelables contain a ton of boilerplate code. To implement a Parcelable, you must mirror the writeToParcel() and createFromParcel() methods such that they read and write to the Parcel in the same order. Also, a Parcelable must define a public static final Parcelable.Creator CREATOR in order for the Android infrastructure to be able to leverage the serialization code.
+In Android, Parcelables are a great way to serialize Java Objects between Contexts. Compared with traditional Serialization, Parcelables take on the order of 10x less time to both serialize and deserialize. There is a major flaw with Parcelables, however. Parcelables contain a ton of boilerplate code. To implement a Parcelable, you must mirror the ```java writeToParcel()``` and ```java createFromParcel()``` methods such that they read and write to the Parcel in the same order. Also, a Parcelable must define a ```java public static final Parcelable.Creator CREATOR``` in order for the Android infrastructure to be able to leverage the serialization code.
 
-Parceler is a code generation library that generates the Android Parcelable boilerplate source code. No longer do you have to implement the Parcelable interface, the writeToParcel() or createFromParcel() or the public static final CREATOR. You simply annotate a POJO with @Parcel and Parceler does the rest. Because Parceler uses the Java JSR-269 Annotation Processor, there is no need to run a tool manually to generate the Parcelable code. Just annotate your Java Bean, compile and you are finished. By default, Parceler will serialize the fields of your instance directly:
+Parceler is a code generation library that generates the Android Parcelable boilerplate source code. No longer do you have to implement the Parcelable interface, the ```java writeToParcel()``` or ```java createFromParcel()``` or the ```java public static final CREATOR```. You simply annotate a POJO with ```java @Parcel``` and Parceler does the rest. Because Parceler uses the Java JSR-269 Annotation Processor, there is no need to run a tool manually to generate the Parcelable code. Just annotate your Java Bean, compile and you are finished.
+
+[This github link](https://github.com/johncarl81/parceler) is a fully details tutorial about how it works and how you can integrate it with your application.
+
+7. **Realm Database :**
+
+**Easy**
+Get set up in minutes, not hours. Even porting a whole app to Realm is faster than just setting up other databases. After that, you'll have a database that works right inside your language, with features like fluent interfaces, field annotations, and more.
+
+**Fast**
+Thanks to its zero-copy design, Realm is much faster than an ORM, and often faster than raw SQLite. So chain queries as deep as you like. You won’t even have time to notice how fast they are.
+
+**Advanced**
+All this ease and speed doesn't mean you give up power. Realm has all the features you expect: encryption, change notifications, easy migrations, sane threading, and more.
+
+[This Video](https://www.youtube.com/watch?v=x_5Ifs8kIrI) is more that awesome made by Vivz that discuss Realm Database Library with Diagrams and shows you how to integrate with it easily from A to Z.
+
+-----------------------------------------------------------------------------------------------------
+
+# MVVM Software Architecture Pattern :
+
+The Data Binding library for android is something that I’ve been keen to check out for a short while. I decided to experiment with it using the Model-View-ViewModel architectural approach.
+
+**What is MVVM?**
+
+Model-View-ViewModel is an architecural approach used to abstract the state and behaviour of a view, which allows us to separate the development of the UI from the business logic. This is accomplished by the introduction of a ViewModel, whos responsibility is to expose the data objects of a model and handle any of the applications logic involved in the display of a view.
+
+This approach (MVVM) is made up of three core components, each with it’s own distinct and separate role:
+**Model** - Data model containing business and validation logic
+**View** - Defines the structure, layout and appearance of a view on screen
+**ViewModel** - Acts a link between the View and Model, dealing with any view logic
+
+![Image]({{site.baseurl}}/https://cdn-images-1.medium.com/max/800/1*VLhXURHL9rGlxNYe9ydqVg.png)
