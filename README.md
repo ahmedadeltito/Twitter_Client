@@ -38,6 +38,8 @@ implementing MVVM Model and using a lot of Great Libraries
 # User Documentation :
 ##1. **Splash Screen :**
 
+![alt tag](https://app.box.com/representation/file_version_75603562317/image_2048/1.png) ![alt tag](https://app.box.com/representation/file_version_75603494485/image_2048/1.png)
+
 This screen contains Image View and Text View with Fade in Animation. After finishing animation, the user either logged in to Followers Screen or Login Screen.
 
 ##2. **Login Screen :**
@@ -67,7 +69,7 @@ Local Database is applied in these two screen Followers and Follower Detail Scre
 -----------------------------------------------------------------------------------------------------
 
 # Technical Documentation :
-##1.**Fabric Framework :**
+##1. **Fabric Framework :**
 
 Fabric is a mobile platform with modular kits you can mix and match to build the best apps. Fabric is tightly integrated into your dev environment, adding new services a breeze. Start with what you need from Fabric today, and quickly add more kits as your needs grow.
 
@@ -79,13 +81,13 @@ If you have an Application subclass, then you can place ```java Fabric.with()```
 
 [This Twitter University Official Video](https://www.youtube.com/watch?v=H9RLFoqTqOQ) illustrates the Fabric Framework, Third Party Libraries that are integrated with Frabric Framework.
 
-##2.**Retrofit :**
+##2. **Retrofit :**
 
 It is a type-safe HTTP client for Android and Java by Square. By using Retrofit in Android we can seamlessly capture JSON responses from a web API. It is different from other libraries because Retrofit gives us an easy way to use since it uses the GSON library in background to parse the responses. All we need to do is define a POJO (Plain Old Java Object) to do all the parsing.
 
 [This tutorial is very helpful](http://androidgifts.com/retrofit-android-library-tutorial-library-6/), discussing how to deal with Retrofit Library in the best way (Your comment is more than welcome since this tutorial is written by me.)
 
-##3.**RxAndroid :**
+##3. **RxAndroid :**
 
 This module adds the minimum classes to RxJava that make writing reactive components in Android applications easy and hassle-free. More specifically, it provides a Scheduler that schedules on the main thread or any given Looper.
 **So what is RxJava ?**
@@ -93,7 +95,7 @@ RxJava is a Java VM implementation of [Reactive Extensions](http://reactivex.io)
 
 [This tutorial is very helpful](https://medium.com/@kurtisnusbaum/rxandroid-basics-part-1-c0d5edcf6850#.b3t73pv08), showing you how RxJava and RxAndroid works
 
-##4.**Piccaso :**
+##4. **Piccaso :**
 
 Images add much-needed context and visual flair to Android applications. Picasso allows for hassle-free image loading in your application—often in one line of code!
 
@@ -104,7 +106,7 @@ Many common pitfalls of image loading on Android are handled automatically by Pi
 
 [This tutorial is very helpful](http://androidgifts.com/picasso-android-library-tutorial/), showing you how to user Piccaso Library in the best way.
 
-##5.**Native Android Data Binding :**
+##5. **Native Android Data Binding :**
 
 The Data Binding Library offers both flexibility and broad compatibility. It's a support library, so you can use it with all Android platform versions back to Android 2.1 (API level 7+).
 
@@ -112,7 +114,7 @@ Yigit Boyar and George Mount of Google developed Android’s Data Binding Librar
 
 All you want to know about Data Binding and its Official Talk that is done by Yigit Boyar and George Mount is [here](https://realm.io/news/data-binding-android-boyar-mount/).
 
-##6.**Parceler :**
+##6. **Parceler :**
 
 In Android, Parcelables are a great way to serialize Java Objects between Contexts. Compared with traditional Serialization, Parcelables take on the order of 10x less time to both serialize and deserialize. There is a major flaw with Parcelables, however. Parcelables contain a ton of boilerplate code. To implement a Parcelable, you must mirror the ```java writeToParcel()``` and ```java createFromParcel()``` methods such that they read and write to the Parcel in the same order. Also, a Parcelable must define a ```java public static final Parcelable.Creator CREATOR``` in order for the Android infrastructure to be able to leverage the serialization code.
 
