@@ -156,3 +156,17 @@ You can see here that the two approaches use a similar architecture, with the ad
 - **View Layer**is a combination of Activity/Fragment with XML and binding. Typical scenario is that Activity requests data from the backend, gets data (POJO) and forwards it to ViewModel Layer. ViewModel Layer updates the UI with the new data.
 - **ViewModel** is the middle man between the View Layer and the model (POJO). It receives data from Model Layer and updates the View Layer. Also, it manipulates the model state (fields in POJO objects) as a result from user interaction from the View Layer.
 
+-----------------------------------------------------------------------------------------------------
+
+# MVVM Example implemented on This Application
+
+![alt tag](https://s31.postimg.org/ox6mx71uj/Twitter_Client.png)
+
+**- FollowersActivity VIEW :**
+Defines the structure, layout and appearance of a view on FollowersActivity screen. Data binding configuration takes place here since you make a data binding between ViewModel and its XML Layout.
+
+**- FollowersViewModel VIEWMODEL :**
+Acts a link between the FollowersActivity "View" and Followers "Model", send notification to FollowersActivity "View" and FollowersActivity "View" make a data minding commands to FollowersViewModel.
+
+**- Followers MODEL :**
+Data model containing business and validation logic, it's a POJO "JavaBean class" that is going to be managed by RestApiClient. Since it will hold the Followers retrieved data from Twitter API Webservice or from Realm Local Database.
