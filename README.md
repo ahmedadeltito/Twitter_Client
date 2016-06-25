@@ -134,8 +134,25 @@ The Data Binding library for android is something that I’ve been keen to check
 Model-View-ViewModel is an architecural approach used to abstract the state and behaviour of a view, which allows us to separate the development of the UI from the business logic. This is accomplished by the introduction of a ViewModel, whos responsibility is to expose the data objects of a model and handle any of the applications logic involved in the display of a view.
 
 This approach (MVVM) is made up of three core components, each with it’s own distinct and separate role:
-**Model** - Data model containing business and validation logic
-**View** - Defines the structure, layout and appearance of a view on screen
-**ViewModel** - Acts a link between the View and Model, dealing with any view logic
+- **Model** - Data model containing business and validation logic
+- **View** - Defines the structure, layout and appearance of a view on screen
+- **ViewModel** - Acts a link between the View and Model, dealing with any view logic
 
-![Image]({{site.baseurl}}/https://cdn-images-1.medium.com/max/800/1*VLhXURHL9rGlxNYe9ydqVg.png)
+![alt tag](https://cdn-images-1.medium.com/max/1400/1*WfT-BCzN0ZAGzdE30oea1g.png)
+
+So how does this differ from the MVC approach that we’re used to? The architecture for MVC is as follows:
+- **The View** sits at the top of the architure with the Controller below it, followed by the Model
+- **The Controller** is aware of both the View and Model
+- **The View** is aware of just the Model and is notified whenever there are changes to it
+
+In **MVVM** the architecture is similar, but there are a few distinct differences:
+- **The Controller** is replaced by a View Model, which sits below the UI layer
+- **This View Model** exposes the data and command objects that the View requires
+- **The View Model** receives its data from the Model
+You can see here that the two approaches use a similar architecture, with the addition of a View Model and the way that it introduces a different approach to the communication between components. The architecture introduces two-way communication between its components, whereas MVC is only capable of one-way communication.
+
+**Overall view of MVVM Architecutre :**
+- **Model Layer:** Like in MVP, DataManager holds a reference to the RestApi (like Retrofit), database (SQLite), etc. Typical scenario is that model layer gets data from the backend and saves data. The difference between MVP and MVVM from the perspective of the Model Layer is that in MVVM architecture DataManager returns response to Activity/Fragment instead to Presenter. That means that Activity/Fragment is aware of business logic (POJO).
+- **View Layer**is a combination of Activity/Fragment with XML and binding. Typical scenario is that Activity requests data from the backend, gets data (POJO) and forwards it to ViewModel Layer. ViewModel Layer updates the UI with the new data.
+- **ViewModel** is the middle man between the View Layer and the model (POJO). It receives data from Model Layer and updates the View Layer. Also, it manipulates the model state (fields in POJO objects) as a result from user interaction from the View Layer.
+
