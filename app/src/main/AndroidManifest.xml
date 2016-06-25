@@ -2,11 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ahmedadel.twitterclient">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:fullBackupContent="true"
+        android:name=".MainApplication"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreen">
             <intent-filter>
@@ -15,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f83ee2b848685ca6e6d87ce8de1fa3e25e640682" />
     </application>
 
 </manifest>
