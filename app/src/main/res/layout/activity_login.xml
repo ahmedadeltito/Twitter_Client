@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/twitter_login"
@@ -21,7 +20,7 @@
             android:background="@color/colorPrimary"
             android:elevation="2dp"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:theme="@style/CustomPopToolbarTheme"
             tools:targetApi="lollipop">
 
             <TextView

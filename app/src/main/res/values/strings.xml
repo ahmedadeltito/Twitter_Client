@@ -27,10 +27,17 @@
     <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** Settings View ** ** ** ** ** ** ** ** ** ** ** ** **  -->
 
     <string name="change_language">Change Language</string>
+    <string name="change_language_body_arabic">Are You Sure To Change Language To Arabic</string>
     <string name="logout">Logout</string>
 
     <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** Logout AlertDialog View ** ** ** ** ** ** ** ** ** ** ** ** **  -->
     <string name="logout_title">Log out?</string>
+    <string name="logout_body">Are Your Sure?</string>
     <string name="logout_yes">Yes</string>
     <string name="logout_cancel">No</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="title_activity_followers_info">FollowersInfoActivity</string>
+    <string name="followers">%s\'s Followers</string>
 </resources>

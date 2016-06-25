@@ -10,29 +10,28 @@ import com.ahmedadel.twitterclient.view.LoginActivity;
 /**
  * Created by ahmedadel on 25/06/16.
  *
- * UserLoginStatus is a UserManager Class that save user login status to be checked every time SplashScreen is opened
- *
+ * ApplicationStatus is a UserManager Class that save user login status to be checked every time SplashScreen is opened
  */
-public class UserLoginStatus {
+public class ApplicationStatus {
 
     private SharedPreferences userLoginStatusSharedPreferences;
     final String USER_LOGIN_STATUS_PREFERENCE = "UserLoginStatusPreference";
     private final String USER_LOGIN_STATUS_EDITOR = "UserLoginStatusEditor";
 
-    static UserLoginStatus userLoginStatus;
+    static ApplicationStatus applicationStatus;
 
     private Activity activity;
 
-    public static UserLoginStatus getInstance(Activity activity) {
-        if (userLoginStatus == null) {
-            userLoginStatus = new UserLoginStatus(activity);
-            return userLoginStatus;
+    public static ApplicationStatus getInstance(Activity activity) {
+        if (applicationStatus == null) {
+            applicationStatus = new ApplicationStatus(activity);
+            return applicationStatus;
         } else {
-            return userLoginStatus;
+            return applicationStatus;
         }
     }
 
-    public UserLoginStatus(Activity activity) {
+    public ApplicationStatus(Activity activity) {
         this.activity = activity;
         userLoginStatusSharedPreferences = activity.getApplicationContext().getSharedPreferences(USER_LOGIN_STATUS_PREFERENCE, 0);
     }

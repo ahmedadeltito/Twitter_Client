@@ -1,12 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ahmedadel.twitterclient.view.FollowersActivity">
 
-</RelativeLayout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="followersViewModel"
+            type="com.ahmedadel.twitterclient.viewmodel.FollowersViewModel" />
+
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="locale"
+        tools:targetApi="jelly_bean_mr1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="locale"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/activity_followers_app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:background="@color/colorPrimary"
+                android:elevation="2dp"
+                android:layoutDirection="locale"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/CustomPopToolbarTheme"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="locale"
+                    android:textColor="@color/white" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <ProgressBar
+                android:id="@+id/activity_followers_progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="2dp"
+                app:visibility="@{followersViewModel.activityFollowerProgressBar}" />
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/activity_followers_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/activity_followers_app_toolbar"
+                app:pullToRefresh="@{followersViewModel.activityFollowerIsPullToRefresh}"
+                app:setOnRefreshListener="@{followersViewModel.onRefreshListener}"
+                app:visibility="@{followersViewModel.activityFollowerSwipeRefreshLayout}">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_followers_recycler_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    app:visibility="@{followersViewModel.activityFollowerRecyclerView}"
+                    tools:listitem="@layout/followers_item_list" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</layout>

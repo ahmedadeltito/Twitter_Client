@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">تويتر برنامج</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** Home View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="login_in">آدخل علي البرنامج</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** FollowerActivity View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="screen_name">تويتر اي دي : %s</string>
+    <string name="bio">تفاصيل : %s</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** FollowerItemList View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="follower_name">الاسم</string>
+    <string name="follower_twitter_id">الاسم تويتر اي دي</string>
+    <string name="follower_desc">بيانات عن المستخدم</string>
+    <string name="no_bio">لا تفاصيل</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** FollowerInfoActivity View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="tweets">تويتس للمستخدم</string>
+    <string name="retweets_count">تويتس :%s</string>
+    <string name="retweets_count_number">٢٠ تويتس</string>
+    <string name="tweet_created_at">تاريخ</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** Settings View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="change_language">تغير اللغة</string>
+    <string name="change_language_body_english">هل آنت متآكيد من تغير اللغة للآنجليزية ؟</string>
+    <string name="logout">خروج</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** Logout AlertDialog View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="logout_title">خروج ؟</string>
+    <string name="logout_body">هل انت متآكيد ؟</string>
+    <string name="logout_yes">نعم</string>
+    <string name="logout_cancel">لا</string>
+
+    <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
+
+    <string name="followers">%s متتبعين</string>
+
+</resources>

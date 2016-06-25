@@ -5,4 +5,5 @@
     <dimen name="horizontal_margin_half">8dp</dimen>
     <dimen name="vertical_margin_half">8dp</dimen>
     <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

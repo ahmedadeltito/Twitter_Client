@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="followersInfoItemViewModel"
+            type="com.ahmedadel.twitterclient.viewmodel.FollowersInfoItemListViewModel" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/followers_info_item_list_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vertical_margin_half"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/vertical_margin_half"
+        android:layoutDirection="locale"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true"
+        tools:targetApi="jelly_bean_mr1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layoutDirection="locale"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_name"
+                android:layoutDirection="locale"
+                android:src="@drawable/twitter_big_icon" />
+
+            <View
+                android:id="@+id/followers_info_list_view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/followers_info_list_tweets_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layoutDirection="locale"
+                android:text="@{followersInfoItemViewModel.tweet}"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="@string/tweets" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layoutDirection="locale"
+                    android:text="@{followersInfoItemViewModel.retweetCounts}"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    tools:text="@string/retweets_count_number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layoutDirection="locale"
+                    android:text="@{followersInfoItemViewModel.createdAt}"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    tools:text="@string/tweet_created_at" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</layout>

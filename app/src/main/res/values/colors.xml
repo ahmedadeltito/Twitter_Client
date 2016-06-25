@@ -7,4 +7,5 @@
     <color name="twitter">#03A9F4</color>
     <color name="divider">#cbcbcb</color>
     <color name="twitter_login">#2aa9df</color>
+    <color name="followers_info_background">#4D03A9F4</color>
 </resources>

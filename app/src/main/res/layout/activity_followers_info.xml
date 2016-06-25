@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="followersInfoViewModel"
+            type="com.ahmedadel.twitterclient.viewmodel.FollowersInfoViewModel" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="locale"
+        tools:targetApi="jelly_bean_mr1">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/activity_followers_info_app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:layoutDirection="locale"
+            android:theme="@style/CustomPopToolbarTheme">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/activity_followers_info_collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layoutDirection="locale"
+                app:contentScrim="?colorPrimary"
+                app:expandedTitleGravity="center"
+                app:expandedTitleMarginBottom="@dimen/activity_vertical_margin"
+                app:expandedTitleTextAppearance="@style/CollapsingTextAppearance.TitleSize"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/activity_followers_info_background_image_ivew"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:layoutDirection="locale"
+                    android:scaleType="centerCrop"
+                    android:tint="@color/followers_info_background" />
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/activity_followers_info_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@null"
+                    android:layoutDirection="locale"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_followers_info_recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:behavior_overlapTop="70dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:visibility="@{followersInfoViewModel.activityFollowersInfoRecyclerView}"
+            tools:listitem="@layout/followers_info_item_list" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

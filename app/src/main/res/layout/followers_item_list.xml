@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="followersItemListViewModel"
+            type="com.ahmedadel.twitterclient.viewmodel.FollowersItemListViewModel" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/followers_item_list_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/vertical_margin_half"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/vertical_margin_half"
+        android:layoutDirection="locale"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true"
+        tools:targetApi="jelly_bean_mr1">
+
+        <RelativeLayout
+            android:id="@+id/follower_item_list_relative_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:layoutDirection="locale"
+            android:onClick="@{followersItemListViewModel::onItemClick}">
+
+            <com.ahmedadel.twitterclient.customviews.roundedimageview.RoundedImageView
+                android:id="@+id/follower_item_list_profile_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/horizontal_margin_half"
+                android:layoutDirection="locale"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{followersItemListViewModel.profileImage}"
+                app:riv_corner_radius="5dip" />
+
+            <TextView
+                android:id="@+id/follower_item_list_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin_half"
+                android:layout_toEndOf="@+id/follower_item_list_profile_image_view"
+                android:layout_toRightOf="@+id/follower_item_list_profile_image_view"
+                android:ellipsize="end"
+                android:layoutDirection="locale"
+                android:maxLines="1"
+                android:text="@{followersItemListViewModel.name}"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                tools:text="@string/follower_name" />
+
+            <TextView
+                android:id="@+id/follower_item_list_twitter_id_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/follower_item_list_name_text_view"
+                android:layout_margin="@dimen/horizontal_margin_half"
+                android:layout_toEndOf="@+id/follower_item_list_profile_image_view"
+                android:layout_toRightOf="@+id/follower_item_list_profile_image_view"
+                android:ellipsize="end"
+                android:layoutDirection="locale"
+                android:maxLines="1"
+                android:text="@{followersItemListViewModel.screenName}"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="@string/follower_twitter_id" />
+
+            <View
+                android:id="@+id/follower_item_list_view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/follower_item_list_profile_image_view"
+                android:background="@color/divider" />
+
+            <TextView
+                android:id="@+id/follower_item_list_desc_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/follower_item_list_view_divider"
+                android:layout_margin="@dimen/horizontal_margin_half"
+                android:gravity="center"
+                android:layoutDirection="locale"
+                android:text="@{followersItemListViewModel.description}"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="@string/follower_desc" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
