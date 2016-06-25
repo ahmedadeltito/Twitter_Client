@@ -6,4 +6,5 @@
     <color name="white">#ffffff</color>
     <color name="twitter">#03A9F4</color>
     <color name="divider">#cbcbcb</color>
+    <color name="twitter_login">#2aa9df</color>
 </resources>

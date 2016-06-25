@@ -3,7 +3,7 @@
 
     <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** Home View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
 
-    <string name="login_in">Login in with Twitter Client</string>
+    <string name="login_in">Login in Via Twitter SDK</string>
 
     <!-- ** ** ** ** ** ** ** ** ** ** ** ** ** ** FollowerActivity View ** ** ** ** ** ** ** ** ** ** ** ** ** **  -->
 
