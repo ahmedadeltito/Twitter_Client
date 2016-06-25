@@ -1,5 +1,7 @@
 # Twitter Client Android Application
 
+-> ![alt tag](https://s32.postimg.org/ltqspht4l/followers_screen.png) <-
+
 A Simple Twitter Client Application that is integrated with Fabric Twitter SDK, 
 implementing MVVM Model and using a lot of Great Libraries
 
@@ -7,12 +9,13 @@ implementing MVVM Model and using a lot of Great Libraries
 
 # Application Features
 1. Splash Screen with Fading in Animation
-2. **Log in** by your Twitter Account (if Twitter Application exists in your mobile phone, so it will be redirected to the TwitterApplication to get Authontecation Permission otherwise A Webpage will be opened).
+2. **Log in** by your Twitter Account
 3. **Save login status** of the logged user.
-4. **Get the user followers** in a Material Design Recycler List View with **Pull to Refresh** and **Infinite Scrolling**.
+4. **Get the user followers** in a Material Design Recycler View with **Pull to Refresh** and **Infinite Scrolling**.
 5. Followers List works in **offline mode**.
 6. **Get Followers Infromation** in a greate User Experience Screen with **Sticky Headr** for Followers Background Image.
-7. **Localization** (Arabic to English and vice versa).
+7. Followers Information works in **offline mode**
+8. **Localization** (Arabic to English and vice versa).
 
 # Libraries are used
 1. [Fabric Framework (Twitter SDK)](https://docs.fabric.io/android/fabric/overview.html)
@@ -39,11 +42,11 @@ This screen contains Image View and Text View with Fade in Animation. After fini
 
 ##2. **Login Screen :**
 
-User can press on Login in button to Log in this application via your Twitter Account. If Twitter Application exists in your mobile phone, so it will be redirected to the TwitterApplication to get Authontecation Permission otherwise A Webpage will be opened.
+User can press on Login in button to Log in the application via your Twitter Account. If Twitter Application exists in your mobile phone, so it will be redirected to the Twitter Application to get Authontecation Permission otherwise A Webpage will be opened.
 
 ##3. **Followers Screen :**
 
-Followers will be appeared that are realted to the logged user. Pull to Refresh and Infinite Scrolling are applied
+Followers will be appeared that are realted to the logged user. Pull to Refresh and Infinite Scrolling are applied.
 
 ##4. **Follower Details Screen :**
 
@@ -55,11 +58,11 @@ Button above is nothing but a logout button that will appear a popup confirmatio
 
 ##6. **Change Langauge:**
 
-Application supports Arabic and English Language with Right-To-Left and Left-To-Right Layout Direction Methodology.
+Application supports Arabic and English Language.
 
 ##7. **Caching :**
 
-Local Database is applied in these two screen Followers and Follower Detail Screens by using Realm Database Library
+Local Database is applied in these two screen Followers and Follower Detail Screens by using Realm Database Library.
 
 -----------------------------------------------------------------------------------------------------
 
