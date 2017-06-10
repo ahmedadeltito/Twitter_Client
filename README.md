@@ -179,8 +179,6 @@ Data model containing business and validation logic, it's a POJO "JavaBean class
 
 # Localization and Native RTL support
 
-![alt tag](http://i.imgur.com/6luBy3D.jpg)
-
 **Localization from Arabic to English and vice verse:**
 While developing your awesome application, sometimes you are required to add a feature to change the language of your app on the fly. However, Android OS does not directly support this behaviour. And therefore, you need to solve this situation in some other ways. “LocaleHelper” is the solution you need. You just have to initialize local on your application’s main class. After that all your language changes will persist.
 if you call ```java onCreate(Context context)``` constructor it will just set default local of your device as the default local of your application.
