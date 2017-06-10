@@ -36,52 +36,38 @@ implementing MVVM Model and using a lot of Great Libraries
 -----------------------------------------------------------------------------------------------------
 
 # User Documentation :
-##1. **Splash Screen :**
-
-![alt tag](http://i.imgur.com/z885xFq.png)
+1. **Splash Screen :**
 
 This screen contains Image View and Text View with Fade in Animation. After finishing animation, the user either logged in to Followers Screen or Login Screen.
 
-##2. **Login Screen :**
-
-![alt tag](http://i.imgur.com/Hjx4TTZ.png)
+2. **Login Screen :**
 
 User can press on Login in button to Log in the application via your Twitter Account. If Twitter Application exists in your mobile phone, so it will be redirected to the Twitter Application to get Authontecation Permission otherwise A Webpage will be opened.
 
-##3. **Followers Screen :**
-
-![alt tag](http://i.imgur.com/t1ihiYu.png)
+3. **Followers Screen :**
 
 Followers will appear realted to the logged user. Pull to Refresh and Infinite Scrolling are applied.
 
-##4. **Follower Details Screen :**
-
-![alt tag](http://i.imgur.com/ZYbeTA9.png)
+4. **Follower Details Screen :**
 
 Details that related to each user will be appeared with his/her recent ten tweets that is done by this specific user.
 
-##5. **Logout :**
-
-![alt tag](http://i.imgur.com/VHEBy22.png)
+5. **Logout :**
 
 Button above is nothing but a logout button that will show a popup confirmation dialog. If the user presses on logout, then the application will be restarted otherwise nothing will happened.
 
-##6. **Change Langauge:**
-
-![alt tag](http://i.imgur.com/oOmyLh7.png)
+6. **Change Langauge:**
 
 Application supports Arabic and English Language.
 
-##7. **Caching :**
-
-![alt tag](http://i.imgur.com/DIxogx5.png)
+7. **Caching :**
 
 Local Database is applied in these two screen Followers and Follower Detail Screens by using Realm Database Library.
 
 -----------------------------------------------------------------------------------------------------
 
 # Technical Documentation :
-##1. **Fabric Framework :**
+1. **Fabric Framework :**
 
 Fabric is a mobile platform with modular kits you can mix and match to build the best apps. Fabric is tightly integrated into your dev environment, adding new services a breeze. Start with what you need from Fabric today, and quickly add more kits as your needs grow.
 
@@ -93,13 +79,13 @@ If you have an Application subclass, then you can place ```java Fabric.with()```
 
 [This Twitter University Official Video](https://www.youtube.com/watch?v=H9RLFoqTqOQ) illustrates the Fabric Framework, Third Party Libraries that are integrated with Frabric Framework.
 
-##2. **Retrofit :**
+2. **Retrofit :**
 
 It is a type-safe HTTP client for Android and Java by Square. By using Retrofit in Android we can seamlessly capture JSON responses from a web API. It is different from other libraries because Retrofit gives us an easy way to use since it uses the GSON library in background to parse the responses. All we need to do is define a POJO (Plain Old Java Object) to do all the parsing.
 
 [This tutorial is very helpful](http://androidgifts.com/retrofit-android-library-tutorial-library-6/), discussing how to deal with Retrofit Library in the best way (Your comment is more than welcome since this tutorial is written by me.)
 
-##3. **RxAndroid :**
+3. **RxAndroid :**
 
 This module adds the minimum classes to RxJava that make writing reactive components in Android applications easy and hassle-free. More specifically, it provides a Scheduler that schedules on the main thread or any given Looper.
 **So what is RxJava ?**
@@ -107,7 +93,7 @@ RxJava is a Java VM implementation of [Reactive Extensions](http://reactivex.io)
 
 [This tutorial is very helpful](https://medium.com/@kurtisnusbaum/rxandroid-basics-part-1-c0d5edcf6850#.b3t73pv08), showing you how RxJava and RxAndroid works
 
-##4. **Piccaso :**
+4. **Piccaso :**
 
 Images add much-needed context and visual flair to Android applications. Picasso allows for hassle-free image loading in your application—often in one line of code!
 
@@ -118,7 +104,7 @@ Many common pitfalls of image loading on Android are handled automatically by Pi
 
 [This tutorial is very helpful](http://androidgifts.com/picasso-android-library-tutorial/), showing you how to user Piccaso Library in the best way.
 
-##5. **Native Android Data Binding :**
+5. **Native Android Data Binding :**
 
 The Data Binding Library offers both flexibility and broad compatibility. It's a support library, so you can use it with all Android platform versions back to Android 2.1 (API level 7+).
 
@@ -126,7 +112,7 @@ Yigit Boyar and George Mount of Google developed Android’s Data Binding Librar
 
 All you want to know about Data Binding and its Official Talk that is done by Yigit Boyar and George Mount is [here](https://realm.io/news/data-binding-android-boyar-mount/).
 
-##6. **Parceler :**
+6. **Parceler :**
 
 In Android, Parcelables are a great way to serialize Java Objects between Contexts. Compared with traditional Serialization, Parcelables take on the order of 10x less time to both serialize and deserialize. There is a major flaw with Parcelables, however. Parcelables contain a ton of boilerplate code. To implement a Parcelable, you must mirror the ```java writeToParcel()``` and ```java createFromParcel()``` methods such that they read and write to the Parcel in the same order. Also, a Parcelable must define a ```java public static final Parcelable.Creator CREATOR``` in order for the Android infrastructure to be able to leverage the serialization code.
 
@@ -134,7 +120,7 @@ Parceler is a code generation library that generates the Android Parcelable boil
 
 [This github link](https://github.com/johncarl81/parceler) is a fully details tutorial about how it works and how you can integrate it with your application.
 
-##7. **Realm Database :**
+7. **Realm Database :**
 
 **Easy**
 Get set up in minutes, not hours. Even porting a whole app to Realm is faster than just setting up other databases. After that, you'll have a database that works right inside your language, with features like fluent interfaces, field annotations, and more.
@@ -153,7 +139,7 @@ All this ease and speed doesn't mean you give up power. Realm has all the featur
 
 The Data Binding library for android is something that I’ve been keen to check out for a short while. I decided to experiment with it using the Model-View-ViewModel architectural approach.
 
-##**What is MVVM?**
+**What is MVVM?**
 
 Model-View-ViewModel is an architecural approach used to abstract the state and behaviour of a view, which allows us to separate the development of the UI from the business logic. This is accomplished by the introduction of a ViewModel, whose responsibility is to expose the data objects of a model and handle any of the applications logic involved in the display of a view.
 
@@ -164,12 +150,12 @@ This approach (MVVM) is made up of three core components, each with it’s own d
 
 ![alt tag](https://cdn-images-1.medium.com/max/1400/1*WfT-BCzN0ZAGzdE30oea1g.png)
 
-##**The architecture for MVC is as follows:**
+**The architecture for MVC is as follows:**
 - **The View** sits at the top of the architure with the Controller below it, followed by the Model
 - **The Controller** is aware of both the View and Model
 - **The View** is aware of just the Model and is notified whenever there are changes to it
 
-##**Overall view of MVVM Architecutre :**
+**Overall view of MVVM Architecutre :**
 - **Model Layer:** Like in MVP, DataManager holds a reference to the RestApi (like Retrofit), database (SQLite), etc. Typical scenario is that model layer gets data from the backend and saves data. The difference between MVP and MVVM from the perspective of the Model Layer is that in MVVM architecture DataManager returns response to Activity/Fragment instead to Presenter. That means that Activity/Fragment is aware of business logic (POJO).
 - **View Layer**is a combination of Activity/Fragment with XML and binding. Typical scenario is that Activity requests data from the backend, gets data (POJO) and forwards it to ViewModel Layer. ViewModel Layer updates the UI with the new data.
 - **ViewModel** is the middle man between the View Layer and the model (POJO). It receives data from Model Layer and updates the View Layer. Also, it manipulates the model state (fields in POJO objects) as a result from user interaction from the View Layer.
@@ -195,13 +181,13 @@ Data model containing business and validation logic, it's a POJO "JavaBean class
 
 ![alt tag](http://i.imgur.com/6luBy3D.jpg)
 
-##**Localization from Arabic to English and vice verse:**
+**Localization from Arabic to English and vice verse:**
 While developing your awesome application, sometimes you are required to add a feature to change the language of your app on the fly. However, Android OS does not directly support this behaviour. And therefore, you need to solve this situation in some other ways. “LocaleHelper” is the solution you need. You just have to initialize local on your application’s main class. After that all your language changes will persist.
 if you call ```java onCreate(Context context)``` constructor it will just set default local of your device as the default local of your application.
 
 if you call ```java onCreate(Context context, String defaultLanguage)``` constructor it will set the given language as the default language of your application for the first time that your application opens. After that you can change your local by using the buttons or any other method that you provide to your users through your layout.
 
-##**Native RTL support:**
+**Native RTL support:**
 Android 4.1 (Jelly Bean) introduced limited support for bidirectional text in TextView and EditText elements, allowing apps to display and edit text in both left-to-right (LTR) and right-to-left (RTL) scripts. Android 4.2 added full native support for RTL layouts, including layout mirroring, allowing you to deliver the same great app experience to all of your users, whether their language uses a script that reads right-to-left or one that reads left-to-right.
 
 To take advantage of RTL layout mirroring, simply make the following changes to your app:
@@ -214,4 +200,4 @@ If you want your app to work with versions earlier than Android 4.2 (the app's t
 
 -----------------------------------------------------------------------------------------------------
 
-###**If you want to know more details about this project, please take a look on [Project Documentation](https://github.com/ahmed-adel-said/Twitter_Client/tree/master/documentation), since it is a HTML generated documentation with great user interface and contains the needed UML diagrams that you need to get the full image**
+**If you want to know more details about this project, please take a look on [Project Documentation](https://github.com/ahmed-adel-said/Twitter_Client/tree/master/documentation), since it is a HTML generated documentation with great user interface and contains the needed UML diagrams that you need to get the full image**
